@@ -18,8 +18,7 @@ echo 'echo hello world' > hello.sh
 ls -l
 
 逐列看懂输出（以 -rw-r--r-- 1 kxwang kxwang 5 ... secret.txt 为例）：
-plain
--        rw-       r--       r--     1  kxwang  kxwang   5   ...  secret.txt
+-         rw-       r--       r--     1  kxwang  kxwang   5   ...  secret.txt
 │         │         │         │      │     │       │      │         └ 文件名
 │         │         │         │      │     │       │      └ 大小(字节)
 │         │         │         │      │     │       └ 属组
