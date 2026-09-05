@@ -1,0 +1,17 @@
+[
+  {
+    "name": "sw1",
+    "ip": "192.168.1.1",
+    "vendor": "huawei"
+  },
+  {
+    "name": "sw2",
+    "ip": "192.168.1.2",
+    "vendor": "h3c"
+  },
+  {
+    "name": "sw3",
+    "ip": "192.168.1.3",
+    "vendor": "huawei"
+  }
+]

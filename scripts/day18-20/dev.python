@@ -1,0 +1,10 @@
+# 设备清单 = 字典的列表(以后所有自动化下面都长这样)
+devices = [
+    {"name":"sw1","ip":"192.168.1.1","vendor":"huawei"},
+    {"name":"sw2","ip":"192.168.1.2","vendor":"h3c"},
+]
+print(devices[0]["ip"])     #取第1台的IP
+devices.append({"name":"sw3","ip":"192.168.1.3","vendor":"huawei"}) #追加
+for dev in devices:         #遍历
+    print(dev["name"],dev.get("ip"),dev["vendor"])    #.get()取值,键不存在时返回None而不是报错
+len(devices)                #几台设

@@ -1,0 +1,93 @@
+!Software Version V200R005C10SPC607B607
+!Last configuration was updated at 2026-09-04 08:16:46+00:00
+!Last configuration was saved at 2021-09-21 11:30:39+00:00
+#
+sysname HUAWEI
+#
+device board 17 board-type CE-MPUB
+device board 1 board-type CE-LPUE
+#
+vlan batch 10
+#
+aaa
+ local-user admin1 password irreversible-cipher $1c$l>'X$k=Mz*$B'A0VB&*=FG`w(3afk,-;#54U=<Sn84iiPOt=8&($
+ local-user admin1 service-type ssh snmp
+ local-user admin1 level 3
+ #
+ authentication-scheme default
+ #
+ authorization-scheme default
+ #
+ accounting-scheme default
+ #
+ domain default
+ #
+ domain default_admin
+#
+interface Vlanif1
+#
+interface Vlanif10
+ ip address 192.168.30.252 255.255.255.0
+#
+interface MEth0/0/0
+ undo shutdown
+#
+interface GE1/0/0
+ undo shutdown
+ port default vlan 10
+#
+interface GE1/0/1
+ undo shutdown
+#
+interface GE1/0/2
+ undo shutdown
+#
+interface GE1/0/3
+ undo shutdown
+#
+interface GE1/0/4
+ undo shutdown
+#
+interface GE1/0/5
+ undo shutdown
+#
+interface GE1/0/6
+ undo shutdown
+#
+interface GE1/0/7
+ undo shutdown
+#
+interface GE1/0/8
+ undo shutdown
+#
+interface GE1/0/9
+ undo shutdown
+#
+interface NULL0
+#
+stelnet server enable
+ssh user admin1
+ssh user admin1 authentication-type password
+ssh user admin1 service-type all
+ssh authorization-type default aaa
+#
+ssh server cipher aes256_gcm aes128_gcm aes256_ctr aes192_ctr aes128_ctr aes256_cbc aes128_cbc 3des_cbc
+#
+ssh server dh-exchange min-len 1024
+#
+ssh client cipher aes256_gcm aes128_gcm aes256_ctr aes192_ctr aes128_ctr aes256_cbc aes128_cbc 3des_cbc
+#
+user-interface con 0
+#
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group a
+#
+port-group ced
+#
+port-group lin
+#
+vm-manager
+#
+return

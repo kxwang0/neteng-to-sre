@@ -1,0 +1,5 @@
+name = input("设备名: ")
+ip = input("管理IP: ")
+print("=" * 40)
+print(f"开始巡检 {name} ({ip})")
+print("=" * 40)
