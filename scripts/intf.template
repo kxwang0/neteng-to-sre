@@ -1,0 +1,13 @@
+# TextFSM 模板：解析华为 display interface brief
+# 语法：Value 字段名 (正则)   —— 声明要抓的列
+#       Start                 —— 初始状态
+#       ^... -> Record        —— 行首匹配成功就记一行
+# \S+ = 连续非空白；\s+ = 连续空白（列与列之间的空格）
+# 实际第 4 列是 InUti（带宽利用率），不是 IP；字段名沿用脚本里的 IP
+Value INTF (\S+)
+Value PHY (\S+)
+Value PROTO (\S+)
+Value IP (\S+)
+
+Start
+  ^${INTF}\s+${PHY}\s+${PROTO}\s+${IP} -> Record
