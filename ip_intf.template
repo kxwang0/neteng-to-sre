@@ -1,0 +1,9 @@
+Value INTF (\S+)
+Value PHY (\S+)
+Value PROTO (\S+)
+Value IP (\S+)
+
+Start
+  ^${INTF}\s+current state\s+:\s+${PHY}
+  ^Line protocol current state\s+:\s+${PROTO}
+  ^Internet Address is\s+${IP} -> Record

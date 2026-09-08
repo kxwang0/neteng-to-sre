@@ -1,0 +1,7 @@
+Value INTF (\S+)
+Value PHY (\S+)
+Value PROTO (\S+)
+Value IP (\S+)
+
+Start
+  ^${INTF}\s+${PHY}\s+${PROTO}\s+${IP} -> Record

@@ -61,6 +61,7 @@
 - 完成面向对象速通——能读懂、会封装
 - 完成Netmiko 深入——配置下发与并发采集
 - 完成内容复盘
-- 明日计划解析、生成与 Git 协作
+- 明日计划TextFSM 深入 + ntc-templates 模板库
 
-### Day43
+### Day43-49 (2026-09-08)
+- 完成TextFSM 深入 + ntc-templates 模板库

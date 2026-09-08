@@ -1,0 +1,11 @@
+Value INTERFACE (\S+)
+Value IP (\S+)
+Value PHYSICAL (\S+)
+Value PROTOCOL (\S+)
+
+Start
+  ^\s*Interface\s+IP
+  ^\*down:
+  ^!down:
+  ^${INTERFACE}\s+${IP}\s+${PHYSICAL}\s+${PROTOCOL} -> Record
+  ^.
