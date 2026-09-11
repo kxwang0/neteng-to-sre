@@ -1,0 +1,9 @@
+sysname R1
+
+interface GE1/0/1
+ description to-cloud
+ ip address 192.168.1.11 255.255.255.0
+
+interface LoopBack0
+ description router-id
+ ip address 10.0.1.1 255.255.255.255
