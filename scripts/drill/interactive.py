@@ -111,14 +111,24 @@ def check_C(src: str, ns: dict, out: str, var: str) -> list[tuple[bool, str]]:
         src.find("for ") == -1 or src.find("with open") < src.find("for ")
     )
     hits.append((with_before_for, "with open 在 for 循环外面（否则每次清空只剩最后一条）"))
-    out_file = HERE / "drill_out.txt"
-    hits.append((out_file.exists() and out_file.stat().st_size > 0, f"写了文件 {out_file.name}"))
-    if out_file.exists():
-        text = out_file.read_text(encoding="utf-8", errors="replace")
-        hits.append(("=====" in text or "display" in text, "文件里有命令分隔或内容"))
-        if var == "2":
-            hits.append((str(date.today()) in str(ns) or str(date.today()) in src or str(date.today()) in text,
-                         "文件名或内容带上今天日期"))
+    today = str(date.today())
+    if var == "2":
+        dated = [
+            p
+            for p in HERE.iterdir()
+            if p.is_file() and today in p.name and p.suffix in {".txt", ".log"}
+        ]
+        hits.append((bool(dated), f"本目录有带今天日期 {today} 的文件（不要写成字符串路径）"))
+        if dated:
+            text = dated[0].read_text(encoding="utf-8", errors="replace")
+            hits.append(("=====" in text or "display" in text, "文件里有命令分隔或内容"))
+        hits.append(("datetime" in src and "today" in src, "用了 datetime.date.today()，不是把函数名当路径"))
+    else:
+        out_file = HERE / "drill_out.txt"
+        hits.append((out_file.exists() and out_file.stat().st_size > 0, f"写了文件 {out_file.name}"))
+        if out_file.exists():
+            text = out_file.read_text(encoding="utf-8", errors="replace")
+            hits.append(("=====" in text or "display" in text, "文件里有命令分隔或内容"))
         if var == "3":
             hits.append(("utf-8" in src, "open(..., encoding='utf-8')"))
     return hits
