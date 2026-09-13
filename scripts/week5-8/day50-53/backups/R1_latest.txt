@@ -1,0 +1,87 @@
+!Software Version V200R005C10SPC607B607
+!Last configuration was updated at 2026-09-11 15:54:44+00:00 by admin1
+!Last configuration was saved at 2026-09-11 09:03:54+00:00
+#
+sysname R1
+#
+device board 17 board-type CE-MPUB
+device board 1 board-type CE-LPUE
+#
+vlan batch 10
+#
+aaa
+ local-user admin1 password irreversible-cipher $1c$~Bu1>89s\U$n6EH5Et/^M-96g,t>[.5HH[PQB,2O13wWAJ.~P8Y$
+ local-user admin1 service-type ssh
+ local-user admin1 level 3
+ #
+ authentication-scheme default
+ #
+ authorization-scheme default
+ #
+ accounting-scheme default
+ #
+ domain default
+ #
+ domain default_admin
+#
+interface Vlanif10
+ ip address 192.168.30.252 255.255.255.0
+#
+interface MEth0/0/0
+ undo shutdown
+#
+interface GE1/0/0
+ undo shutdown
+ port default vlan 10
+#
+interface GE1/0/1
+ description to-cloud
+ undo shutdown
+#
+interface GE1/0/2
+ undo shutdown
+#
+interface GE1/0/3
+ undo shutdown
+#
+interface GE1/0/4
+ undo shutdown
+#
+interface GE1/0/5
+ undo shutdown
+#
+interface GE1/0/6
+ undo shutdown
+#
+interface GE1/0/7
+ undo shutdown
+#
+interface GE1/0/8
+ undo shutdown
+#
+interface GE1/0/9
+ undo shutdown
+#
+interface LoopBack0
+ description router-id
+ ip address 10.0.1.1 255.255.255.255
+#
+interface NULL0
+#
+stelnet server enable
+ssh authorization-type default aaa
+#
+ssh server cipher aes256_gcm aes128_gcm aes256_ctr aes192_ctr aes128_ctr aes256_cbc aes128_cbc 3des_cbc
+#
+ssh server dh-exchange min-len 1024
+#
+ssh client cipher aes256_gcm aes128_gcm aes256_ctr aes192_ctr aes128_ctr aes256_cbc aes128_cbc 3des_cbc
+#
+user-interface con 0
+#
+user-interface vty 0 4
+ authentication-mode aaa
+#
+vm-manager
+#
+return

@@ -1,0 +1,9 @@
+2026-09-13 00:04:34,747 [INFO] Connected (version 2.0, client -)
+2026-09-13 00:04:34,967 [INFO] Authentication (password) failed.
+2026-09-13 00:04:34,967 [ERROR] R1 认证失败：用户名/密码或 aaa 配置问题
+2026-09-13 00:04:37,832 [ERROR] R-BAD 连接超时：网络不通或设备没开 SSH
+2026-09-13 00:04:42,530 [INFO] Connected (version 2.0, client -)
+2026-09-13 00:04:42,857 [INFO] Authentication (password) successful!
+2026-09-13 00:04:45,509 [INFO] R1 配置变更，差异 87 行
+2026-09-13 00:04:45,647 [ERROR] R-BAD 连接超时：网络不通或设备没开 SSH
+2026-09-13 00:04:45,648 [INFO] 成功 1 台，失败 1 台，有变更 1 台

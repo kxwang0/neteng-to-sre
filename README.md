@@ -1,5 +1,18 @@
 # neteng-to-sre
-网络工程师转DevOps/SRE学习打卡仓库
+网络工程师转 DevOps/SRE 学习打卡仓库。
+
+## 毕业作品：配置备份工具 v2
+
+并发备份华为设备配置，和上次备份做 diff：无变更只记日志，有变更才归档日期版。  
+完整说明见 [`scripts/week5-8/day50-53/README.md`](scripts/week5-8/day50-53/README.md)。
+
+```bash
+cd scripts/week5-8/day50-53
+python3.12 -m pip install netmiko PyYAML
+python3.12 backup_v2.py --config devices.yaml --workers 2
+```
+
+运行时用 `getpass` 询问设备密码，不要写进 YAML 或脚本。清单里的 `R-BAD` 是故意写错的 IP，用来验证「单台失败不中断」。
 
 ## 学习日志
 
@@ -79,5 +92,10 @@
 - 明日计划Git进阶--分支、冲突与PR流程
 
 ### Day47-49 (2026-09-12)
+- 完成 Git 进阶——分支、冲突与 PR 流程
+- 明日计划：迷你项目——配置备份工具 v2
 
+### Day50-53 (2026-09-13)
+- 完成迷你项目——配置备份工具 v2（YAML 清单、Device 类、并发、diff 归档）
+- 说明文档：`scripts/week5-8/day50-53/README.md`
 
