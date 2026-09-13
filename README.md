@@ -95,7 +95,12 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 完成 Git 进阶——分支、冲突与 PR 流程
 - 明日计划：迷你项目——配置备份工具 v2
 
-### Day50-53 (2026-09-13)
+### Day50-56 (2026-09-13)
 - 完成迷你项目——配置备份工具 v2（YAML 清单、Device 类、并发、diff 归档）
 - 说明文档：`scripts/week5-8/day50-53/README.md`
+- 完成项目周与月度复盘
+- 明日计划Nornir入门
+
+### Day57-59 (2026-09-14)
+
 
