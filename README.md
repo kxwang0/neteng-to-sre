@@ -101,6 +101,11 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 完成项目周与月度复盘
 - 明日计划Nornir入门
 
-### Day57-59 (2026-09-14)
+### Day57-63 (2026-09-14)
+- 完成Nornir入门
+- 完成Scrapli速览
+- 明日计划FastAPI入门
+
+### Day64-70 (2026-09-15)
 
 
