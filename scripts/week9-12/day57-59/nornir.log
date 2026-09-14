@@ -1,0 +1,8 @@
+2026-09-14 18:14:18,656 - nornir.plugins.inventory.simple -  WARNING -       load() - 'day57_defaults.yaml' is empty or contains only comments, defaulting to empty defaults.
+2026-09-14 18:14:21,762 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'display version'} on 1 hosts
+2026-09-14 18:17:15,274 - nornir.plugins.inventory.simple -  WARNING -       load() - 'day57_defaults.yaml' is empty or contains only comments, defaulting to empty defaults.
+2026-09-14 18:17:20,437 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'display version'} on 1 hosts
+2026-09-14 18:17:38,499 - nornir.plugins.inventory.simple -  WARNING -       load() - 'day57_defaults.yaml' is empty or contains only comments, defaulting to empty defaults.
+2026-09-14 18:17:41,611 -  nornir.core -  WARNING -        run() - Task 'netmiko_send_command' has not been run – 0 hosts selected
+2026-09-14 18:17:52,750 - nornir.plugins.inventory.simple -  WARNING -       load() - 'day57_defaults.yaml' is empty or contains only comments, defaulting to empty defaults.
+2026-09-14 18:17:55,346 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'display version'} on 1 hosts

@@ -1,0 +1,4 @@
+R1:
+  hostname: 192.168.30.252      # 换成你的设备 IP
+  username: admin1
+  platform: huawei             # 就是 netmiko 的 device_type
