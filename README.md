@@ -107,5 +107,9 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 明日计划FastAPI入门
 
 ### Day64-70 (2026-09-15)
+- 完成FastAPI入门
+- 完成备份工具API化
+- 明日计划项目B--配置合规检查器
 
+### Day71-77 (2026-09-16)
 

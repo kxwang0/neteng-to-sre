@@ -1,0 +1,8 @@
+- name: R1
+  host: 192.168.30.252
+  username: admin1
+  device_type: huawei
+- name: R-BAD
+  host: 192.168.30.250
+  username: admin1
+  device_type: huawei
