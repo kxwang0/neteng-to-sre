@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>配置合规检查报告</title>
+<style>
+  body { font-family: sans-serif; margin: 2em; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #999; padding: 6px 10px; text-align: left; }
+  .pass { color: green; } .fail { color: red; font-weight: bold; }
+</style></head>
+<body>
+<h1>配置合规检查报告</h1>
+<p>扫描日期：2026-09-17　设备总数：2</p>
+
+<h2>R1（192.168.30.252）—— 通过 4 / 5</h2>
+<table>
+<tr><th>ID</th><th>检查项</th><th>级别</th><th>结果</th><th>整改建议</th></tr>
+
+<tr>
+  <td>SEC-001</td><td>关闭 Telnet 服务</td><td>high</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>SEC-002</td><td>SNMP community 不得使用默认团体字</td><td>high</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>SEC-003</td><td>必须配置 NTP 时间同步</td><td>medium</td>
+  <td class="fail">违规</td>
+  <td>配置 ntp server 指向内网时间源</td>
+</tr>
+
+<tr>
+  <td>SEC-004</td><td>必须启用 SSH(Stelnet) 管理</td><td>medium</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>SEC-005</td><td>必须配置本地 AAA 管理账号</td><td>low</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+</table>
+
+<h2>R2（192.168.30.253）—— 通过 4 / 5</h2>
+<table>
+<tr><th>ID</th><th>检查项</th><th>级别</th><th>结果</th><th>整改建议</th></tr>
+
+<tr>
+  <td>SEC-001</td><td>关闭 Telnet 服务</td><td>high</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>SEC-002</td><td>SNMP community 不得使用默认团体字</td><td>high</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>SEC-003</td><td>必须配置 NTP 时间同步</td><td>medium</td>
+  <td class="fail">违规</td>
+  <td>配置 ntp server 指向内网时间源</td>
+</tr>
+
+<tr>
+  <td>SEC-004</td><td>必须启用 SSH(Stelnet) 管理</td><td>medium</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>SEC-005</td><td>必须配置本地 AAA 管理账号</td><td>low</td>
+  <td class="pass">通过</td>
+  <td></td>
+</tr>
+
+</table>
+
+</body></html>

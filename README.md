@@ -112,4 +112,11 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 明日计划项目B--配置合规检查器
 
 ### Day71-77 (2026-09-16)
+- 完成配置合规检查器
+- 完成扫描多台+结果落盘
+- 完成Jinja2渲染HTML报告
+
+
+
+
 

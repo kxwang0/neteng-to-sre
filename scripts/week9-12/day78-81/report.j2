@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>配置合规检查报告</title>
+<style>
+  body { font-family: sans-serif; margin: 2em; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #999; padding: 6px 10px; text-align: left; }
+  .pass { color: green; } .fail { color: red; font-weight: bold; }
+</style></head>
+<body>
+<h1>配置合规检查报告</h1>
+<p>扫描日期：{{ scan_time }}　设备总数：{{ devices|length }}</p>
+{% for dev in devices %}
+<h2>{{ dev.name }}（{{ dev.host }}）—— 通过 {{ dev.passed }} / {{ dev.total }}</h2>
+<table>
+<tr><th>ID</th><th>检查项</th><th>级别</th><th>结果</th><th>整改建议</th></tr>
+{% for r in dev.results %}
+<tr>
+  <td>{{ r.id }}</td><td>{{ r.name }}</td><td>{{ r.severity }}</td>
+  <td class="{{ 'pass' if r.pass else 'fail' }}">{{ '通过' if r.pass else '违规' }}</td>
+  <td>{{ '' if r.pass else r.advice }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}
+</body></html>

@@ -1,0 +1,111 @@
+{
+  "scan_time": "2026-09-17",
+  "devices": [
+    {
+      "name": "R1",
+      "host": "192.168.30.252",
+      "passed": 4,
+      "total": 5,
+      "results": [
+        {
+          "id": "SEC-001",
+          "name": "关闭 Telnet 服务",
+          "type": "forbid",
+          "pattern": "\\btelnet server enable",
+          "severity": "high",
+          "advice": "关闭 Telnet，统一使用 SSH 管理",
+          "pass": true
+        },
+        {
+          "id": "SEC-002",
+          "name": "SNMP community 不得使用默认团体字",
+          "type": "forbid",
+          "pattern": "community\\s+(simple\\s+|cipher\\s+)?(public|private)\\b",
+          "severity": "high",
+          "advice": "更换为强团体字，优先升级到 SNMPv3",
+          "pass": true
+        },
+        {
+          "id": "SEC-003",
+          "name": "必须配置 NTP 时间同步",
+          "type": "require",
+          "pattern": "ntp[- ]",
+          "severity": "medium",
+          "advice": "配置 ntp server 指向内网时间源",
+          "pass": false
+        },
+        {
+          "id": "SEC-004",
+          "name": "必须启用 SSH(Stelnet) 管理",
+          "type": "require",
+          "pattern": "stelnet server enable",
+          "severity": "medium",
+          "advice": "开启 stelnet server 并禁用 Telnet",
+          "pass": true
+        },
+        {
+          "id": "SEC-005",
+          "name": "必须配置本地 AAA 管理账号",
+          "type": "require",
+          "pattern": "local-user\\s+\\S+\\s+password",
+          "severity": "low",
+          "advice": "建立带 privilege level 的本地管理账号",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "R2",
+      "host": "192.168.30.253",
+      "passed": 4,
+      "total": 5,
+      "results": [
+        {
+          "id": "SEC-001",
+          "name": "关闭 Telnet 服务",
+          "type": "forbid",
+          "pattern": "\\btelnet server enable",
+          "severity": "high",
+          "advice": "关闭 Telnet，统一使用 SSH 管理",
+          "pass": true
+        },
+        {
+          "id": "SEC-002",
+          "name": "SNMP community 不得使用默认团体字",
+          "type": "forbid",
+          "pattern": "community\\s+(simple\\s+|cipher\\s+)?(public|private)\\b",
+          "severity": "high",
+          "advice": "更换为强团体字，优先升级到 SNMPv3",
+          "pass": true
+        },
+        {
+          "id": "SEC-003",
+          "name": "必须配置 NTP 时间同步",
+          "type": "require",
+          "pattern": "ntp[- ]",
+          "severity": "medium",
+          "advice": "配置 ntp server 指向内网时间源",
+          "pass": false
+        },
+        {
+          "id": "SEC-004",
+          "name": "必须启用 SSH(Stelnet) 管理",
+          "type": "require",
+          "pattern": "stelnet server enable",
+          "severity": "medium",
+          "advice": "开启 stelnet server 并禁用 Telnet",
+          "pass": true
+        },
+        {
+          "id": "SEC-005",
+          "name": "必须配置本地 AAA 管理账号",
+          "type": "require",
+          "pattern": "local-user\\s+\\S+\\s+password",
+          "severity": "low",
+          "advice": "建立带 privilege level 的本地管理账号",
+          "pass": true
+        }
+      ]
+    }
+  ]
+}
