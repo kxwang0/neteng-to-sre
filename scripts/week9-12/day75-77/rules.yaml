@@ -1,0 +1,34 @@
+- id: SEC-001
+  name: 关闭 Telnet 服务
+  type: forbid                      # forbid：命中即违规
+  pattern: '\btelnet server enable'
+  severity: high
+  advice: 关闭 Telnet，统一使用 SSH 管理
+
+- id: SEC-002
+  name: SNMP community 不得使用默认团体字
+  type: forbid
+  pattern: 'community\s+(simple\s+|cipher\s+)?(public|private)\b'
+  severity: high
+  advice: 更换为强团体字，优先升级到 SNMPv3
+
+- id: SEC-003
+  name: 必须配置 NTP 时间同步
+  type: require                     # require：不命中即违规
+  pattern: 'ntp[- ]'
+  severity: medium
+  advice: 配置 ntp server 指向内网时间源
+
+- id: SEC-004
+  name: 必须启用 SSH(Stelnet) 管理
+  type: require
+  pattern: 'stelnet server enable'
+  severity: medium
+  advice: 开启 stelnet server 并禁用 Telnet
+
+- id: SEC-005
+  name: 必须配置本地 AAA 管理账号
+  type: require
+  pattern: 'local-user\s+\S+\s+password'
+  severity: low
+  advice: 建立带 privilege level 的本地管理账号

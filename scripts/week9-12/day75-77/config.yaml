@@ -1,0 +1,10 @@
+inventory:
+  plugin: SimpleInventory
+  options:
+    host_file: "host.yaml"
+    group_file: "group.yaml"
+    defaults_file: "defaults.yaml"
+runner:
+  plugin: threaded
+  options:
+    num_workers: 5        # 内置线程池——你 Day 40 手写过的东西

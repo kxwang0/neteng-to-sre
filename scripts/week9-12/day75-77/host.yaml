@@ -1,0 +1,8 @@
+R1:
+  hostname: 192.168.30.252
+  username: admin1
+  platform: huawei
+R2:
+  hostname: 192.168.30.253
+  username: admin1
+  platform: huawei
