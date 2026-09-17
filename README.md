@@ -117,8 +117,11 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 完成Jinja2渲染HTML报告
 - 明日计划架构认知、inventory与ad-hoc
 
-### Day85-105 (2026-09-17)
+### Day85-98 (2026-09-17)
 - 完成架构认知、inventory与ad-hoc
+- 完成playbook备份配置的Ansible版本
+- 完成密码安全与变量体系
+- 完成变量驱动+模板下发
 
 
 
