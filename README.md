@@ -130,5 +130,7 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 
 ### Day99-105 (2026-09-22)
 - 完成role--playbook的函数化封装
+- 明日计划Go入门
 
+### Day106-112 (2026-09-23)
 
