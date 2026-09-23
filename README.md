@@ -133,4 +133,5 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 明日计划Go入门
 
 ### Day106-112 (2026-09-23)
-
+- 完成Go环境与语法速通
+- 完成Go实战--内网SSH端口扫描器
