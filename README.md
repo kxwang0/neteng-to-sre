@@ -138,3 +138,7 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 明日计划云认知与Terraform起步
 
 ### Day113-119 (2026-09-24)
+- 完成账号安全与第一台手动ECS
+- Terraform安装与工作流四部曲
+- 明日计划拉起能SSH的云主机并自动初始化
+
