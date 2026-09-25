@@ -143,3 +143,8 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 - 明日计划拉起能SSH的云主机并自动初始化
 
 ### Day120-126 (2026-09-25)
+- 完成VPC+子网+安全组+ECS全家桶
+- 完成Terrraform→Ansible联动
+
+### 中秋出游(2026-09-26)
+### 中秋出游(2026-09-27)
