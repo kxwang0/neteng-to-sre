@@ -148,3 +148,11 @@ python3.12 backup_v2.py --config devices.yaml --workers 2
 
 ### 中秋出游(2026-09-26)
 ### 中秋出游(2026-09-27)
+### 国庆休假(2026-09-28到2026-10-14)
+
+### Day127-133 (2026-10-15)
+- 完成 portfolio 工程 `~/code/127-132lab`：2× ECS + SG 22/8000
+- 完成 Ansible 基线（netops、关 root）与 FastAPI systemd 双机部署
+- 完成 `up.sh` / `down.sh` / README
+- Day133 周复盘：全流程时序 + 数据流 + 面试口述（见 [`notes/17-20week/day-127-133.md`](notes/17-20week/day-127-133.md) § Day 133）
+
